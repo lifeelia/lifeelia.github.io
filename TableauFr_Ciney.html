@@ -20,8 +20,8 @@
 <script src="Common_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="Common_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="Common_files/navigation-1.1/tabsets.js"></script>
-<link href="Common_files/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="Common_files/highlightjs-1.1/highlight.js"></script>
+<link href="Common_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="Common_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -140,7 +142,7 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
-<p>Bilan en date du 18/11/2017</p>
+<p>Bilan en date du 25/04/2018</p>
 <p><a href="https://lifeelia.github.io/WebMap_FullScreen_Ciney.html" target="_blank">Affichage de cette interface en plein écran</a><br />
 <a href="https://lifeelia.github.io/WebMap_FullScreen_Ciney.html" target="_blank"> <img border="0" alt="Interface leaflet" src="Vignette_Leaflet-VerySmall.png" width="250"></a></p>
 
